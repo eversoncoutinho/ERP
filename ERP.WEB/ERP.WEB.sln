@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.WEB", "ERP.WEB\ERP.WEB.csproj", "{9BBBF175-A860-4C75-AE96-7EACCD43C229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C17F2A0C-689F-483E-A485-A72073A56432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{1350C19C-CE21-496C-B5B7-9EE861C00F90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BBBF175-A860-4C75-AE96-7EACCD43C229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBBF175-A860-4C75-AE96-7EACCD43C229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBBF175-A860-4C75-AE96-7EACCD43C229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBBF175-A860-4C75-AE96-7EACCD43C229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17F2A0C-689F-483E-A485-A72073A56432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17F2A0C-689F-483E-A485-A72073A56432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17F2A0C-689F-483E-A485-A72073A56432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17F2A0C-689F-483E-A485-A72073A56432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1350C19C-CE21-496C-B5B7-9EE861C00F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1350C19C-CE21-496C-B5B7-9EE861C00F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1350C19C-CE21-496C-B5B7-9EE861C00F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1350C19C-CE21-496C-B5B7-9EE861C00F90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7566D8D4-B91E-4FA3-A335-0C2CB7A5C401}
+	EndGlobalSection
+EndGlobal
