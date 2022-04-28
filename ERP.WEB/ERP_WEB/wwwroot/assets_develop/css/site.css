@@ -1,0 +1,211 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+#orcamento{
+    color:#018076
+}
+legend {
+    color: #018076;
+}
+fieldset{
+border: 2px solid;
+border-radius: 8px;
+padding: 10px;
+border-color: #4bbdac;
+}
+/*CSS da tabela sem Table*/
+#resp-table-header {
+    display: table-header-group;
+    background-color: gray;
+    font-weight: bold;
+    font-size: 25px;
+}
+#resp-table-caption {
+    display: table-caption;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.table-header-cell {
+    display: table-cell;
+    padding: 10px;
+    text-align: justify;
+    border-bottom: 1px solid black;
+}
+#resp-table-body {
+    display: table-row-group;
+}
+.table-body-cell {
+    display: table-cell;
+}
+.resp-table-row {
+    display: table-row;
+}
+
+
+
+/*fim div*/
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+ 
+    background-color: #4bbdac;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+
+    align-content:center;
+}
+.btn {
+    width: 87px ;
+    font-size: 14px
+}
+
+i {
+    font-size: 2rem;
+}
+
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 2.35rem;
+}
+
+
+.bg-white {
+    background-color: #4bbdac !important;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+element.style {
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+}
+
+/*@media (min-width: 576px) .navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;*/
+    /* color: darkkhaki; */
+/*}*/
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55);
+}
+
+/*@media (min-width: 576px)*/ 
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.text-dark {
+    color: #fff !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #fff;
+}
+
+.form-check-input:checked {
+    background-color: #4bbdac;
+    border-color: #4bbdac;
+}
+
+.bordaCriar {
+    border-color: #4bbdac;
+}
+
+#footer {
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+}
