@@ -1,6 +1,7 @@
 ﻿using Application.VM;
 using AutoMapper;
 using Domain;
+using Domain.Entities;
 
 namespace Applications.Mappings
 {
@@ -8,8 +9,8 @@ namespace Applications.Mappings
     {
         public MappingProfile() 
         { 
-        CreateMap<Produto, ProdutoIndexVM>().ReverseMap();
-            CreateMap<Produto, ProdutoCreateVM>().ReverseMap();
+        CreateMap<Compra, CompraIndexVM>().ReverseMap();
+            CreateMap<Compra, CompraCreateVM>().ReverseMap();
         }
     }
 }

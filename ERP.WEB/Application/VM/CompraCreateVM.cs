@@ -1,0 +1,19 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace Application.VM
+{
+    public  class CompraCreateVM
+    {
+        [Display(Name = "Produto")]
+        public string Nome { get; set; }
+        [Display(Name  = "Data da Compra")]
+        public DateTime DateTime { get; set; }
+        [Display(Name = "Preço unitário")]
+        public string Price { get; set; }
+        public int Quantidade { get; set; }
+        public string Fornecedor { get; set; }
+
+    }
+
+}

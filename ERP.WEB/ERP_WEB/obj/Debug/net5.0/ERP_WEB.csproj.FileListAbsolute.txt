@@ -154,11 +154,6 @@ D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\zh-Hans\Micr
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Produtos\Create.cshtml.g.cs
-D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Produtos\Delete.cshtml.g.cs
-D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Produtos\Details.cshtml.g.cs
-D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Produtos\Edit.cshtml.g.cs
-D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Produtos\Index.cshtml.g.cs
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\AutoMapper.dll
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -167,3 +162,14 @@ D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\Microsoft.Ex
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\Application.dll
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\Application.pdb
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Compras\Create.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Compras\Delete.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Compras\Details.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Compras\Edit.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Compras\Index.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Create.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Delete.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Details.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Edit.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Index.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Estoque\Index.cshtml.g.cs

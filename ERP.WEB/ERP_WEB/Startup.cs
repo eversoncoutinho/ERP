@@ -27,7 +27,10 @@ namespace ERP_WEB
             {
                 options.DefaultRequestCulture = new RequestCulture("pt-PT");
             });
-
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/Estoque/Index", "");
+            });
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(profile: new MappingProfile());
@@ -42,7 +45,8 @@ namespace ERP_WEB
                 )
             );
 
-            
+
+
             services.AddControllersWithViews();
       
         }
@@ -50,6 +54,9 @@ namespace ERP_WEB
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

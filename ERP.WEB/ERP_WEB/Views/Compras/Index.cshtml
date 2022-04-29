@@ -1,0 +1,73 @@
+﻿
+@model CompraIndexVM
+
+@{
+    ViewData["Title"] = "Compras";
+}
+
+<h1>Compras</h1>
+
+<p>
+    <a asp-action="Create">Registrar Entrada</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label asp-for=Compras[0].Nome></label>              
+            
+            </th>
+            <th>
+                 <label asp-for=Compras[0].DateTime></label>    
+           
+            </th>
+            <th>
+                 <label asp-for=Compras[0].Price></label>    
+               
+            </th>
+            <th>
+                 <label asp-for=Compras[0].Quantidade></label>    
+               
+            </th>
+            <th>
+                 <label asp-for=Compras[0].Fornecedor></label>    
+               
+            </th>
+                        <th>
+                             <label asp-for=Compras[0].Total></label>    
+                
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Compras) {
+        <tr>
+            <td>
+                @item.Nome
+                
+            </td>
+            <td>
+                @item.DateTime
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @item.Quantidade
+            </td>
+            <td>
+                @item.Fornecedor
+            </td>
+                        <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
