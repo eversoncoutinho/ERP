@@ -173,3 +173,4 @@ D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Edit.cshtml.g.cs
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Consumos\Index.cshtml.g.cs
 D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\obj\Debug\net5.0\Razor\Views\Estoque\Index.cshtml.g.cs
+D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\bin\Debug\net5.0\bundleconfig.json

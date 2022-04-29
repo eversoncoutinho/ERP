@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hfjsJd+1Ea60HN1bgqAtXllJbt0WOD0hMHezpFc1rHwThqSRZ0TneZe5sB2qBvRMIUdCm1PmknsmE23ut9chAA==",
+  "dgSpecHash": "gR4B+ZOf2BxlNTlKU147oYALFpbXB6+qYkMIEUkrKmZmoWl+aKcsGkIiUheEd9lfGWTPEH5cUhpU2o3aMvZG1w==",
   "success": true,
   "projectFilePath": "D:\\Dropbox\\_Programacao\\dotnet\\ERP\\ERP.WEB\\ERP_WEB\\ERP_WEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\everson\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\everson\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\linqkit.core\\1.2.2\\linqkit.core.1.2.2.nupkg.sha512",
     "C:\\Users\\everson\\.nuget\\packages\\linqkit.microsoft.entityframeworkcore\\5.1.2\\linqkit.microsoft.entityframeworkcore.5.1.2.nupkg.sha512",
