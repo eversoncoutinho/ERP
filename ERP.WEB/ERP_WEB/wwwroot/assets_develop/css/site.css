@@ -2,7 +2,7 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 #orcamento{
-    color:#018076
+    color:black
 }
 legend {
     color: #018076;
@@ -11,7 +11,7 @@ fieldset{
 border: 2px solid;
 border-radius: 8px;
 padding: 10px;
-border-color: #4bbdac;
+border-color: blue;
 }
 /*CSS da tabela sem Table*/
 #resp-table-header {
@@ -65,7 +65,7 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #000;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -112,12 +112,11 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
- 
-    background-color: #4bbdac;
+    background-color: #fae4aa;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
 
-    align-content:center;
+    align-content: center;
 }
 .btn {
     width: 87px ;
@@ -136,7 +135,7 @@ i {
 
 
 .bg-white {
-    background-color: #4bbdac !important;
+    background-color: #fae4aa !important;
 }
 
 .bd-placeholder-img {
@@ -188,24 +187,24 @@ element.style {
 }
 
 .text-dark {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .navbar-light .navbar-brand {
-    color: #fff;
+    color: #000;
 }
 
 .form-check-input:checked {
-    background-color: #4bbdac;
-    border-color: #4bbdac;
+    background-color: blue;
+    border-color: blue;
 }
 
 .bordaCriar {
-    border-color: #4bbdac;
+    border-color: blue;
 }
 
 #footer {
-    color: #fff;
+    color: #fae4aa;
     align-items: center;
     text-decoration: none;
 }

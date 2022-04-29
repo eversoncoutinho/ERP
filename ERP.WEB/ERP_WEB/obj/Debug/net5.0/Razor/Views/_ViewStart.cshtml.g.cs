@@ -33,8 +33,15 @@ using Application.VM;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\Dropbox\_Programacao\dotnet\ERP\ERP.WEB\ERP_WEB\Views\_ViewImports.cshtml"
+using Domain.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e06ef3fcd46f721a1024d560a1097449127bf168", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33e5086b3762d1110e4aad28d9d0cdad53fd66e1", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

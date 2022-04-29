@@ -1,5 +1,6 @@
 ﻿
-using Domain;
+
+using Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,15 +15,21 @@ namespace Infra.Data
         }
 
         
-        public  DbSet<Produto> Produtos { get; set; }
+        public  DbSet<Compra> Compras { get; set; }
+        public DbSet<Consumo> Consumos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            var produto = builder.Entity<Produto>();
-            produto.Property(n => n.Price).HasPrecision(5, 2);
-            produto.Property(n => n.Total).HasPrecision(6, 2);
+            //Compras
+            var compra = builder.Entity<Compra>();
+            compra.Property(n => n.Price).HasPrecision(5, 2);
+            compra.Property(n => n.Total).HasPrecision(6, 2);
+
+
+            //Consumo
+            var consumo = builder.Entity<Consumo>();
 
         }
     }
