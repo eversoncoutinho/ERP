@@ -10,11 +10,17 @@ using Infra.Data;
 using Application.VM;
 using AutoMapper;
 using Domain.Entities;
+using System.Globalization;
+using System.Threading;
 
 namespace ERP_WEB.Controllers
 {
     public class ComprasController : Controller
     {
+        //Para Capitalizar as palavras
+        TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
+
+
         private readonly ERPDbContext _context;
         private readonly IMapper _mapper;
 
@@ -82,10 +88,11 @@ namespace ERP_WEB.Controllers
 
             if (ModelState.IsValid)
             {
+                
                 var produto = new Compra
                 {
-
-                    Nome = produtoVM.Nome,
+                    
+                    Nome = ti.ToTitleCase(produtoVM.Nome.Trim()),
                     DateTime=produtoCreateVM.DateTime,
                     Fornecedor=produtoVM.Fornecedor,
                     Quantidade=produtoVM.Quantidade,

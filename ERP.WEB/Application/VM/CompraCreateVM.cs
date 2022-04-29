@@ -5,6 +5,7 @@ namespace Application.VM
 {
     public  class CompraCreateVM
     {
+        public int Id { get; set; }
         [Display(Name = "Produto")]
         public string Nome { get; set; }
         [Display(Name  = "Data da Compra")]

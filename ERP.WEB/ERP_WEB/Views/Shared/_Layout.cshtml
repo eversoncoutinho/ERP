@@ -75,6 +75,23 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 
+     @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+    <script>
+        let Price = $("#Price").val())
+        Price = Price.replace(/,/g,''.'')
+        Price = parseFloat(Price)
+        $("#Price").val(Price)
+
+
+                    //txAdm.val((parseInt)txAdm.val())
+                    //txAdm.
+
+    </script>
+
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
