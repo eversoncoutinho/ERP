@@ -22,3 +22,7 @@
     }, false);
 })();
 
+//Script for mask to current
+$(function () {
+    $("#Price").maskMoney({ thousands: '.', decimal: ',', allowZero: true, suffix: ' €' });
+})

@@ -4,14 +4,16 @@ using Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ERP.WEB.Data.Migrations
+namespace Infra.Migrations
 {
     [DbContext(typeof(ERPDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220430090953_range")]
+    partial class range
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,15 +38,15 @@ namespace ERP.WEB.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasPrecision(5, 2)
-                        .HasColumnType("decimal(5,2)");
+                        .HasPrecision(11, 2)
+                        .HasColumnType("decimal(11,2)");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Total")
-                        .HasPrecision(6, 2)
-                        .HasColumnType("decimal(6,2)");
+                        .HasPrecision(11, 2)
+                        .HasColumnType("decimal(11,2)");
 
                     b.HasKey("Id");
 

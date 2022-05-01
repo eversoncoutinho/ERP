@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ERP.WEB.Data.Migrations
+namespace Infra.Migrations
 {
     [DbContext(typeof(ERPDbContext))]
-    [Migration("20220428112229_compras")]
-    partial class compras
+    [Migration("20220430234726_enum2")]
+    partial class enum2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,19 +38,43 @@ namespace ERP.WEB.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasPrecision(5, 2)
-                        .HasColumnType("decimal(5,2)");
+                        .HasPrecision(11, 2)
+                        .HasColumnType("decimal(11,2)");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Total")
-                        .HasPrecision(6, 2)
-                        .HasColumnType("decimal(6,2)");
+                        .HasPrecision(11, 2)
+                        .HasColumnType("decimal(11,2)");
+
+                    b.Property<int>("Unidades")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("Compras");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Consumo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Consumos");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

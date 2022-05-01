@@ -42,6 +42,7 @@ namespace ERP_WEB.Controllers
 
                 estoqueLista.Add(estoqueNomeQuantVM);
             }
+
             return View(estoqueLista.ToList());
         }
 

@@ -12,6 +12,7 @@ using AutoMapper;
 using Domain.Entities;
 using System.Globalization;
 using System.Threading;
+using Microsoft.Extensions.Logging;
 
 namespace ERP_WEB.Controllers
 {
@@ -23,25 +24,40 @@ namespace ERP_WEB.Controllers
 
         private readonly ERPDbContext _context;
         private readonly IMapper _mapper;
+        private readonly ILogger _logger;
 
         public ComprasController(ERPDbContext context,
-            IMapper mapper)
+            IMapper mapper,
+            ILogger<ComprasController> logger)
         {
             _context = context;
             _mapper = mapper;
+            _logger = logger;
         }
 
         // GET: Produtos
         public async Task<IActionResult> Index()
 
         {
-            var produtoVM = new CompraIndexVM()
-            {
-                Compras = await _context.Compras.ToListAsync()
-
-            };           
             
-            return View(produtoVM);
+            try
+            {
+                var comprasVM = new CompraIndexVM()
+                {
+                    Compras = await _context.Compras.AsNoTracking().ToListAsync()
+
+
+            };
+                
+
+                return View(comprasVM);
+            }
+            catch (Exception e) {
+                _logger.LogInformation($" {e}================GET api/categorias/produtos ======================");
+
+            }
+            return View();
+
         }
 
         // GET: Produtos/Details/5
@@ -77,7 +93,7 @@ namespace ERP_WEB.Controllers
         {
             CompraCreateVM produtoCreateVM = new CompraCreateVM()
             {
-                Price = produtoVM.Price.Replace('.',','),
+                Price = produtoVM.Price.Replace('€',' ').Trim(),
                 DateTime = produtoVM.DateTime,
                 Nome = produtoVM.Nome,
                 Fornecedor = produtoVM.Fornecedor,
@@ -115,22 +131,32 @@ namespace ERP_WEB.Controllers
                 return NotFound();
             }
 
-            var produto = await _context.Compras.FindAsync(id);
-            if (produto == null)
+            var compra = await _context.Compras.FindAsync(id);
+            
+            
+            if (compra == null)
             {
                 return NotFound();
             }
-            return View(produto);
+            var compraVM = new CompraCreateVM()
+            {
+                Id=compra.Id,
+                Nome = compra.Nome,
+                DateTime = compra.DateTime,
+                Fornecedor = compra.Fornecedor,
+                Price = String.Format($"{compra.Price}").Replace('.',' ').Replace("€", "").Trim(),
+                Quantidade = compra.Quantidade
+
+            };
+            return View(compraVM);
         }
 
-        // POST: Produtos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Nome,DateTime,Price,Quantidade,Fornecedor,Id")] Compra produto)
+        public async Task<IActionResult> Edit(int id, CompraCreateVM compraVM)
         {
-            if (id != produto.Id)
+            if (id != compraVM.Id)
             {
                 return NotFound();
             }
@@ -139,12 +165,24 @@ namespace ERP_WEB.Controllers
             {
                 try
                 {
-                    _context.Update(produto);
+                    var dPrice = compraVM.Price.Replace('.', ' ').Replace('€', ' ').Trim();
+                    var compra = new Compra
+                    {
+                        Id= compraVM.Id,
+                        Nome = ti.ToTitleCase(compraVM.Nome.Trim()),
+                        DateTime = compraVM.DateTime,
+                        Fornecedor = compraVM.Fornecedor,
+                        Quantidade = compraVM.Quantidade,
+                        Price = decimal.Parse(dPrice)
+                    };
+                    compra.Total = compra.TotalCal(compra.Price, compra.Quantidade);
+                    
+                    _context.Update(compra);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProdutoExists(produto.Id))
+                    if (!ProdutoExists(compraVM.Id))
                     {
                         return NotFound();
                     }
@@ -155,7 +193,7 @@ namespace ERP_WEB.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(produto);
+            return View(compraVM);
         }
 
         // GET: Produtos/Delete/5

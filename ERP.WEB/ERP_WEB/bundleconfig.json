@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/assets/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/assets_develop/css/site.css" 
+    ]    
+  },
+
+  {
+    "outputFileName": "wwwroot/assets/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/assets_develop/js/site.js",
+      
+      "wwwroot/assets_develop/js/jquery.maskMoney.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+                }
+  }
+
+]
