@@ -24,8 +24,8 @@ namespace Infra.Data
 
             //Compras
             var compra = builder.Entity<Compra>();
-            compra.Property(n => n.Price).HasPrecision(5, 2);
-            compra.Property(n => n.Total).HasPrecision(6, 2);
+            compra.Property(n => n.Price).HasPrecision(11, 2);
+            compra.Property(n => n.Total).HasPrecision(11, 2);
 
 
             //Consumo

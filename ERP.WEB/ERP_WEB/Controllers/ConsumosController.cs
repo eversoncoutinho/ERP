@@ -68,6 +68,7 @@ namespace ERP_WEB.Controllers
         // GET: Consumos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            try { 
             if (id == null)
             {
                 return NotFound();
@@ -79,6 +80,8 @@ namespace ERP_WEB.Controllers
                 return NotFound();
             }
             return View(consumo);
+            }catch (Exception ) { }
+            return View();
         }
 
         // POST: Consumos/Edit/5

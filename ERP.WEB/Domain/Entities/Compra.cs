@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Enum;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -25,15 +26,16 @@ namespace Domain.Entities
         public string Nome { get; set; }
         [Display(Name = "Data de Compra")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateTime { get; set; }
 
         [Display(Name = "Preço Unitário")]
         [Column(TypeName = "decimal(5, 2)")]
         [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
-
         public decimal Price { get; set; }
         public int Quantidade { get; set; }
+        public EUnidade Unidades { get; set; }
         public string Fornecedor { get; set; }
 
         [DataType(DataType.Currency)]

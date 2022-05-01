@@ -8,6 +8,10 @@ using Infra.Data;
 using AutoMapper;
 using Applications.Mappings;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Logging;
+using System.Globalization;
+using Microsoft.Extensions.Globalization;
+using System.Collections.Generic;
 
 namespace ERP_WEB
 {
@@ -23,23 +27,36 @@ namespace ERP_WEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //
+            
             services.Configure<RequestLocalizationOptions>(options =>
             {
+
                 options.DefaultRequestCulture = new RequestCulture("pt-PT");
+
+                options.SupportedCultures = new List<CultureInfo> { new CultureInfo("pt-PT") };
+                options.RequestCultureProviders = new List<IRequestCultureProvider>();
+
             });
+
+
             services.AddMvc().AddRazorPagesOptions(options =>
             {
                 options.Conventions.AddPageRoute("/Estoque/Index", "");
             });
+
+            //AutoMapper
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(profile: new MappingProfile());
             });
 
             IMapper mapper = mappingConfig.CreateMapper();
-
             services.AddSingleton(mapper);
+            
+            //Context
             services.AddDbContext<ERPDbContext>(options =>
+            
             options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")
                 )
@@ -52,9 +69,10 @@ namespace ERP_WEB
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, 
+                                     IWebHostEnvironment env, 
+                                     ILoggerFactory loggerFactory)
         {
-
             
 
             if (env.IsDevelopment())
