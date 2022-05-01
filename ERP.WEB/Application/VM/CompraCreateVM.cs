@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Enum;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Application.VM
@@ -13,6 +14,7 @@ namespace Application.VM
         [Display(Name = "Preço unitário")]
         public string Price { get; set; }
         public int Quantidade { get; set; }
+        public EUnidade Unidades { get; set; }
         public string Fornecedor { get; set; }
 
     }

@@ -22,13 +22,18 @@
            
             </th>
             <th>
-                 <label asp-for=Compras[0].Price></label>    
+                 <label asp-for=Compras[0].Price id="Price"></label>    
                
             </th>
             <th>
                  <label asp-for=Compras[0].Quantidade></label>    
                
             </th>
+            <th>
+               <label asp-for=Compras[0].Unidades></label>    
+               
+            </th>
+
             <th>
                  <label asp-for=Compras[0].Fornecedor></label>    
                
@@ -55,6 +60,9 @@
             </td>
             <td>
                 @item.Quantidade
+            </td>
+            <td>
+               @item.Unidades
             </td>
             <td>
                 @item.Fornecedor
